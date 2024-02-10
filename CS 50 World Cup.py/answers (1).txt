@@ -1,0 +1,6 @@
+10 turniejów: Czas trwania symulacji: 0m0.000s
+100 turniejów: Czas trwania symulacji: 0m0.001s
+1000 turniejów: Czas trwania symulacji: 0m0.009s
+10000 turniejów: Czas trwania symulacji: 0m0.088s
+100000 turniejów: Czas trwania symulacji: 0m0.948s
+1000000 turniejów: Czas trwania symulacji: 0m9.554s
