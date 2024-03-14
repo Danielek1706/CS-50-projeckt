@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title> Sports Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function checkAnswer(button) {
+            const correctAnswer = "Michael Jordan";
+            const selectedAnswer = button.textContent;
+
+            const feedback = button.parentElement.nextElementSibling;
+
+            if (selectedAnswer === correctAnswer) {
+                button.style.backgroundColor = "green";
+                feedback.textContent = "Correct answer!";
+            } else {
+                button.style.backgroundColor = "red";
+                feedback.textContent = "Incorrect answer!";
+            }
+        }
+
+        function checkTextAnswer() {
+            const correctAnswer = "Soccer";
+            const userInput = document.getElementById("answer2").value.toLowerCase();
+            const feedback = document.getElementById("feedback2");
+
+            if (userInput === correctAnswer.toLowerCase()) {
+                document.getElementById("answer2").style.backgroundColor = "green";
+                feedback.textContent = "Correct!";
+            } else {
+                document.getElementById("answer2").style.backgroundColor = "red";
+                feedback.textContent = "Incorrect";
+            }
+        }
+        </script>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1> Sports Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <div class="question">
+                    <h3>Who is considered the greatest basketball player of all time?</h3>
+                    <button class="option" onclick="checkAnswer(this)">LeBron James</button>
+                    <button class="option" onclick="checkAnswer(this)">Michael Jordan</button>
+                    <button class="option" onclick="checkAnswer(this)">Kobe Bryant</button>
+                </div>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->  <div class="question">
+                <h3>Which sport is known as "The Beautiful Game"?</h3>
+                <input type="text" id="answer2" placeholder="Enter your answer">
+                <button onclick="checkTextAnswer()">Submit</button>
+            </div>
+            <div class="feedback" id="feedback2"></div>
+
+            </div>
+        </div>
+    </body>
+</html>
